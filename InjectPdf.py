@@ -25,16 +25,15 @@ def print_colored_figlet_text(text, color):
 
 def select_payload():
     print_with_animation(f"Available payloads for windows:")
-   
-        print_with_animation(f"{Fore.GREEN}1. windows/meterpreter/reverse_tcp")
-        print_with_animation("2. windows/shell/reverse_tcp")
-        payload_choice = input("Enter the payload number: ")
-        if payload_choice == '1':
-            return "windows/meterpreter/reverse_tcp"
-        elif payload_choice == '2':
-       	    return "windows/shell/reverse_tcp"
+    print_with_animation(f"{Fore.GREEN}1. windows/meterpreter/reverse_tcp")
+    print_with_animation("2. windows/shell/reverse_tcp")
+    payload_choice = input("Enter the payload number: ")
+    if payload_choice == '1':
+        return "windows/meterpreter/reverse_tcp"
+    elif payload_choice == '2':
+        return "windows/shell/reverse_tcp"
     else:
-        print_with_animation(f"{Fore.RED}Invalid choice.Defaulting to android/meterpreter/reverse_tcp.")
+        print_with_animation(f"{Fore.RED}Invalid choice. Defaulting to android/meterpreter/reverse_tcp.")
         return "android/meterpreter/reverse_tcp"
 
 def generate_payload():
